@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NSX - قائمة المهام</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>NSX - قائمة المهام</h1>
+    <input type="text" id="taskInput" placeholder="أدخل مهمة جديدة..." />
+    <button onclick="addTask()">إضافة</button>
+    <button onclick="toggleMode()">تبديل الوضع</button>
+    <div class="filter">
+      <label>عرض:</label>
+      <select id="filterSelect" onchange="filterTasks()">
+        <option value="all">الكل</option>
+        <option value="completed">المكتملة</option>
+        <option value="active">غير المكتملة</option>
+      </select>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
